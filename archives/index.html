@@ -339,6 +339,33 @@
     
     
     <article class="index-post">
+        <a class="abstract-title" href = "/2018/07/13/端口转发集合/" >
+            
+                <span>端口转发集合</span>
+        </a>
+        <div class="abstract-content">
+            一些常用的端口转发集合
+1. Linux  portmap转发ssh到外网 不太常用
+123./portmap -m 2 -p1 6666 -h2 8.8.8.8 -p2 7777    #先在外网执行./portmap -m 3 -h1 127.0.0.1 -p1 22 -h2 8.8.8.8 -p2 6666  #在内网shell下执行ssh 127.0.0.1 -p 7777   #在外网机器上执行
+2. Windows lcx转发3389到外网
+123lcx.exe -listen 1234 2333   #本地 监听1234端口,转发数据到2333端口lcx.exe -slav...
+        </div>
+        <div class="abstract-post-meta">
+            <!-- date  -->
+            <div class="abstract-date">
+                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2018/07/13</span>
+            </div>
+            <!-- tags  -->
+            
+        </div>
+    </article>
+    
+    
+    
+    
+    
+    
+    <article class="index-post">
         <a class="abstract-title" href = "/2018/07/13/渗透测试中常见的端口/" >
             
                 <span>渗透测试中常见的端口</span>
@@ -519,9 +546,18 @@
     
     
     
+    
+    
+    
+    
+    
+    
+    
+    
+    
     <div class="total-and-search">
         <div class="total-archive">
-        Total : 3
+        Total : 4
         </div>
         <!-- search  -->
         
@@ -534,6 +570,11 @@
     
     <div class="archive-year"> 2018 </div>
     <ul class="year-list">
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">07/13</span><a class="archive-post-title" href= "/2018/07/13/端口转发集合/" >端口转发集合</a>
+        </li>
     
     
         <li class="archive-post-item">
