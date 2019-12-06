@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     
-    <title>域权限提升14-068 | Hexo</title>
+    <title>域权限提升14-068 | 个人笔记</title>
     
     
         <meta name="keywords" content="域权限提升14-068" />
@@ -13,7 +13,7 @@
 <meta property="og:type" content="article">
 <meta property="og:title" content="域权限提升14-068">
 <meta property="og:url" content="https://github.com/p1gz/p1gz.github.io/tree/master/2019/06/30/域权限提升14-068/index.html">
-<meta property="og:site_name" content="Hexo">
+<meta property="og:site_name" content="个人笔记">
 <meta property="og:description" content="^.^不忘初心，方得始终。 域权限提升14-068MS14-068编号CVE-2014-6324，补丁为3011780，如果自检可在域控制器上使用命令检测  1systeminfo |find &quot;3011780&quot; 1.当获取到一个权限之后，利用溢出或者其他办法尽量把权限提到最高 2.利用溢出加载mimikataz获取当前系统内的账号密码域信息 3.通过mimikatz抓取：123456789101">
 <meta property="og:locale" content="default">
 <meta property="og:image" content="data:image/png;base64,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">
@@ -42,7 +42,7 @@
     
 
     
-        <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml" />
+        <link rel="alternate" href="/atom.xml" title="个人笔记" type="application/atom+xml" />
     
 
     
@@ -80,7 +80,7 @@
         <div class="outer">
             <a href="/" id="logo">
                 <i class="logo"></i>
-                <span class="site-title">Hexo</span>
+                <span class="site-title">个人笔记</span>
             </a>
             <nav id="main-nav">
                 
@@ -99,7 +99,7 @@
             <div id="search-form-wrap">
 
     <form class="search-form">
-        <input type="text" class="ins-search-input search-form-input" placeholder="Buscar" />
+        <input type="text" class="ins-search-input search-form-input" placeholder="Search" />
         <button type="submit" class="search-form-submit"></button>
     </form>
     <div class="ins-search">
@@ -118,10 +118,10 @@
 (function (window) {
     var INSIGHT_CONFIG = {
         TRANSLATION: {
-            POSTS: 'Entradas',
+            POSTS: 'Posts',
             PAGES: 'Pages',
-            CATEGORIES: 'Categorias',
-            TAGS: 'Etiquetas',
+            CATEGORIES: 'Categories',
+            TAGS: 'Tags',
             UNTITLED: '(Untitled)',
         },
         ROOT_URL: '/',
@@ -152,7 +152,7 @@
                 <td>
                     
     <div class="search-form">
-        <input type="text" class="ins-search-input search-form-input" placeholder="Buscar" />
+        <input type="text" class="ins-search-input search-form-input" placeholder="Search" />
     </div>
 
                 </td>
@@ -170,7 +170,7 @@
     
         
     <div class="widget-wrap">
-        <h3 class="widget-title"><span>Archivos</span></h3>
+        <h3 class="widget-title"><span>archives</span></h3>
         <div class="widget">
             <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/12/">December 2019</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/06/">June 2019</a><span class="archive-list-count">1</span></li></ul>
         </div>
@@ -178,6 +178,18 @@
 
     
         
+    
+        
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title"><span>links</span></h3>
+        <div class="widget">
+            <ul>
+                
+            </ul>
+        </div>
+    </div>
+
+
     
     <div id="toTop" class="fa fa-angle-up"></div>
 </aside>
@@ -279,7 +291,7 @@
 <nav id="article-nav">
     
         <a href="/2019/12/06/sqlmap常用参数/" id="article-nav-newer" class="article-nav-link-wrap">
-            <strong class="article-nav-caption">Más nuevo</strong>
+            <strong class="article-nav-caption">Newer</strong>
             <div class="article-nav-title">
                 
                     sqlmap常用参数
