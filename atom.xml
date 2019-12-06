@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>个人笔记</title>
   
-  
+  <subtitle>个人笔记</subtitle>
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://github.com/p1gz/p1gz.github.io/tree/master/"/>
